@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Champagnes de l'Aube</title>
+  <meta name="description" content="Répertoire des maisons de champagne de l'Aube : Côte des Bar, Montgueux et Villenauxe-la-Grande.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="hero-kicker">Répertoire</p>
+    <h1>Les Maisons de Champagne de l'Aube</h1>
+    <p class="hero-sub">Côte des Bar · Montgueux · Villenauxe-la-Grande</p>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Recherche et filtres">
+      <div class="field field-search">
+        <label for="recherche">Rechercher une maison</label>
+        <input type="search" id="recherche" placeholder="Ex. : Drappier" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="filtre-zone">Zone</label>
+        <select id="filtre-zone">
+          <option value="">Toutes les zones</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="filtre-village">Village</label>
+        <select id="filtre-village">
+          <option value="">Tous les villages</option>
+        </select>
+      </div>
+      <button type="button" id="reinitialiser" class="btn-reset">Réinitialiser</button>
+    </section>
+
+    <p id="compteur" class="compteur" aria-live="polite"></p>
+
+    <div id="resultats"></div>
+  </main>
+
+  <footer class="footer">
+    <p>Les informations sont données à titre indicatif. Une maison marquée « À vérifier » demande confirmation.</p>
+    <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+  </footer>
+
+  <!-- Les données d'abord, puis le programme qui les affiche -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
